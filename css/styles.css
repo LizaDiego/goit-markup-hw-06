@@ -1,10 +1,10 @@
-/* CSS Reset */
+/* <-- CSS Reset --> */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Global Settings */
+/* <-- Global Settings --> */
 :root {
   --iris: #4d5ae5;
   --ocean: #404bbf;
@@ -32,7 +32,7 @@ body {
   list-style: none;
 }
 
-/* WEBSTUDIO header logo */
+/* <-- WEBSTUDIO header logo --> */
 .logo {
   color: var(--iris);
   font-family: 'Raleway', sans-serif;
@@ -49,7 +49,7 @@ body {
   color: var(--navyblue);
 }
 
-/* Header top area */
+/* <-- Header top area --> */
 .header {
   border-bottom: 1px solid var(--cornflower);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -145,7 +145,7 @@ li > .link:focus {
   color: var(--ocean);
 }
 
-/* < --Section 1 hero page with modal button -- > */
+/* < --Section 1 Hero order service modal button -- > */
 .hero {
   background-color: var(--navyblue);
   padding: 188px 0;
@@ -193,7 +193,7 @@ li > .link:focus {
   background-color: var(--ocean);
 }
 
-/* <-- Modal window for hero section --> */
+/* <-- Hero section modal window --> */
 .backdrop {
   display: block;
   position: fixed;
@@ -375,6 +375,7 @@ li > .link:focus {
   text-align: center;
 }
 
+/* <-- Section 4 team social media --> */
 .social-media-icons {
   display: flex;
   justify-content: center;
@@ -446,6 +447,11 @@ li > .link:focus {
 }
 
 /* <-- Footer with social media menu --> */
+/* .row {
+    display: flex;
+    flex-direction: row;
+} */
+
 .footer {
   background-color: var(--navyblue);
   padding: 100px 0;
@@ -513,6 +519,61 @@ li > .link:focus {
 
 .footer-socmed-svg {
   fill: var(--cloud);
+}
+
+/* <-- Footer subscribe form --> */
+.subscribe {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
+.input-type {
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--white);
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white);
+}
+
+placeholder {
+  color: var(--white);
+}
+
+.subscribe-button {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  cursor: pointer;
+  background-color: var(--iris);
+  border: none;
+  border-radius: 4px;
+}
+
+.icon-send {
+  margin-left: 16px;
 }
 
 /* < -- Portfolio page with transitions -- > */
