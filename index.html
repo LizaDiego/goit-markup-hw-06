@@ -399,7 +399,7 @@
                 <p class="subscribe">Subscribe</p>
                 <form class="subscribe-form">
                     <label class="subscribe-label">
-                        <input class="input-type" type="E-mail" name="name" placeholder="E-mail">
+                        <input class="input-type" type="email" name="name" placeholder="E-mail">
                     </label>
                     <button class="subscribe-button" type="submit">
                         Subscribe
@@ -419,6 +419,45 @@
                     <use href="./images/SVG-sprite-icons.svg#modal-close"></use>
                 </svg>
             </button>
+            <p class="modal-form-container">
+                Leave your contacts and we will call you back
+            </p>
+            <form>
+                <div class="modal-window-container">
+                    <label class="user-info-label" for="user-name">Name</label>
+                    <div class="input-text-box">
+                        <input class="input-info" type="text" name="user-name" id="user-name">
+                        <svg class="input-info-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="24">
+                            <use href="./images/SVG-sprite-icons.svg#person"></use>
+                        </svg>
+                        </input>
+                    </div>
+                </div>
+                <div class="modal-window-container">
+                    <label class="user-info-label" for="user-name">Phone</label>
+                    <div class="input-text-box">
+                        <input class="input-info" type="text" name="user-name" id="user-name">
+                        <svg class="input-info-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="24">
+                            <use href="./images/SVG-sprite-icons.svg#phone"></use>
+                        </svg>
+                        </input>
+                    </div>
+                </div>
+                <div class="modal-window-container">
+                    <label class="user-info-label" for="user-name">Email</label>
+                    <div class="input-text-box">
+                        <input class="input-info" type="text" name="user-name" id="user-name">
+                        <svg class="input-info-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="24">
+                            <use href="./images/SVG-sprite-icons.svg#email"></use>
+                        </svg>
+                        </input>
+                    </div>
+                </div>
+                <div>
+                    <label class="user-info-label" for="user-comment">Comment</label>
+                    <textarea class="text-input-box" name="user-comment" id="user-comment" placeholder="Text input" cols="30" rows="10"></textarea>
+                </div>
+            </form>
         </div>
     </div>
     <script src="./modal.js"></script>
