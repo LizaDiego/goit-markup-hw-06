@@ -236,7 +236,7 @@ li > .link:focus {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--navyblue);
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-window-container {
@@ -264,7 +264,7 @@ li > .link:focus {
   background-color: transparent;
   padding-left: 38px;
   outline: transparent;
-  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-info:focus {
@@ -279,8 +279,43 @@ li > .link:focus {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-info-svg:focus {
+.input-info .input-info-svg:focus {
   fill: var(--iris);
+}
+
+.text-area-box {
+  margin-bottom: 16px;
+}
+
+.text-area-box:focus {
+  border-color: var(--iris);
+}
+
+.check-box-mark {
+  margin-bottom: 24px;
+}
+
+.accep-mark {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--lightslate);
+}
+
+.term-condition {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  background-color: var(--ocean);
 }
 
 .text-input-box {
