@@ -24,6 +24,11 @@ body {
   background-color: var(--white);
 }
 
+input,
+textarea {
+  outline: none;
+}
+
 .link {
   text-decoration: none;
 }
@@ -229,6 +234,10 @@ li > .link:focus {
   padding: 72px 24px 24px 24px;
 }
 
+label {
+  display: block;
+}
+
 .modal-form-container {
   font-weight: 500;
   font-size: 16px;
@@ -243,7 +252,7 @@ li > .link:focus {
   margin-bottom: 8px;
 }
 
-.user-info-label {
+.modal-window-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -252,7 +261,7 @@ li > .link:focus {
   margin-bottom: 4px;
 }
 
-.input-text-box {
+.modal-input-box {
   position: relative;
 }
 
@@ -263,6 +272,8 @@ li > .link:focus {
   border-radius: 4px;
   background-color: transparent;
   padding-left: 38px;
+  font-family: inherit;
+  font-size: 12px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -279,23 +290,23 @@ li > .link:focus {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-info .input-info-svg:focus {
+.input-info-svg:focus {
   fill: var(--iris);
 }
 
-.text-area-box {
+.modal-textarea {
   margin-bottom: 16px;
 }
 
-.text-area-box:focus {
+.text-info-box:focus {
   border-color: var(--iris);
 }
 
-.check-box-mark {
+.modal-checkbox {
   margin-bottom: 24px;
 }
 
-.accep-mark {
+.checkbox-accept {
   display: block;
   font-size: 12px;
   line-height: 1.17;
@@ -303,19 +314,23 @@ li > .link:focus {
   color: var(--lightslate);
 }
 
-.term-condition {
+/* .check-user-privacy {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
   background-color: var(--ocean);
+} */
+
+.input-checkmark-svg:focus {
+  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-input-box {
@@ -332,6 +347,19 @@ li > .link:focus {
   outline: transparent;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-privacy-info {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+   fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
