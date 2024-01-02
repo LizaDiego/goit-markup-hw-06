@@ -218,6 +218,10 @@ li > .link:focus {
   visibility: hidden;
 }
 
+label {
+  display: block;
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -234,11 +238,13 @@ li > .link:focus {
   padding: 72px 24px 24px 24px;
 }
 
-label {
+.modal-window-label,
+.modal-textarea-label {
   display: block;
+  position: relative;
 }
 
-.modal-form-container {
+.modal-form-header {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -248,24 +254,17 @@ label {
   margin-bottom: 16px;
 }
 
-.modal-window-container {
-  margin-bottom: 8px;
-}
-
-.modal-window-label {
+.modal-window-label,
+.modal-textarea-label {
   font-size: 12px;
+  font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--lightslate);
-  display: block;
   margin-bottom: 4px;
 }
 
-.modal-input-box {
-  position: relative;
-}
-
-.input-info {
+.input-info-box {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -274,11 +273,16 @@ label {
   padding-left: 38px;
   font-family: inherit;
   font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-info:focus {
+.input-info-box:hover,
+.input-info-box:focus,
+.textarea-comment-box:hover,
+.textarea-comment-box:focus {
   border-color: var(--iris);
 }
 
@@ -290,7 +294,8 @@ label {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-info-svg:focus {
+.input-info-box:hover + .input-info-svg,
+.input-info-box:hover {
   fill: var(--iris);
 }
 
@@ -298,42 +303,7 @@ label {
   margin-bottom: 16px;
 }
 
-.text-info-box:focus {
-  border-color: var(--iris);
-}
-
-.modal-checkbox {
-  margin-bottom: 24px;
-}
-
-.checkbox-accept {
-  display: block;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--lightslate);
-}
-
-/* .check-user-privacy {
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
-  background-color: var(--ocean);
-} */
-
-.input-checkmark-svg:focus {
-  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.text-input-box {
+.textarea-comment-box {
   width: 100%;
   height: 120px;
   font-size: 12px;
@@ -349,7 +319,22 @@ label {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.user-privacy-info {
+.user-privacy-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--lightslate);
+}
+
+.checkbox-user-acccept {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.checkbox-icon-svg {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -357,11 +342,46 @@ label {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  fill: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
-   fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 2px;
+  fill: var(--white);
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.checkbox-user-privacy:checked + .checkbox-icon-svg {
+  background-color: var(--iris);
+  border-color: var(--iris);
+}
+
+/* <-- This is for the form send button --> */
+a {
+  text-decoration: none;
+}
+
+.modal-form-send {
+  color: var(--white);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 4px;
+  background: var(--iris);
+  padding: 16px 32px;
+  margin: 0 auto;
+  cursor: pointer;
+  display: block;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-send:hover,
+.modal-form-send:focus {
+  background-color: var(--ocean);
+}
+
+/* <-- This is for the order service button --> */
 .modal-close {
   position: absolute;
   top: 24px;
@@ -581,11 +601,6 @@ label {
 }
 
 /* <-- Footer with social media menu --> */
-/* .row {
-    display: flex;
-    flex-direction: row;
-} */
-
 .footer {
   background-color: var(--navyblue);
   padding: 100px 0;
@@ -600,6 +615,7 @@ label {
   line-height: 1.5;
   letter-spacing: 0.02em;
   max-width: 264px;
+  align-items: center;
 }
 
 .footer .link {
@@ -612,7 +628,8 @@ label {
   align-items: baseline;
 }
 
-.wrapper {
+.footer-logo-wrapper,
+.footer-socmed-wrapper {
   margin-right: 120px;
 }
 
@@ -656,7 +673,7 @@ label {
 }
 
 /* <-- Footer subscribe form --> */
-.subscribe {
+.subscribe-text {
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -670,7 +687,7 @@ label {
   gap: 24px;
 }
 
-.input-type {
+.input-subscribe {
   width: 264px;
   height: 40px;
   border: 1px solid var(--white);
@@ -682,6 +699,11 @@ label {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: var(--white);
+}
+
+.input-subscribe:hover,
+.input-subscribe:focus {
+  border: 1px solid var(--ocean);
 }
 
 placeholder {
@@ -706,8 +728,9 @@ placeholder {
   border-radius: 4px;
 }
 
-.icon-send {
+.icon-send-svg {
   margin-left: 16px;
+  fill: var(--cloud);
 }
 
 /* < -- Portfolio page with transitions -- > */
