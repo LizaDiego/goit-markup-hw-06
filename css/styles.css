@@ -246,12 +246,6 @@ label {
   position: relative;
 }
 
-.modal-window-label,
-.modal-textarea-label {
-  display: block;
-  position: relative;
-}
-
 .modal-form-header {
   font-weight: 500;
   font-size: 16px;
@@ -262,8 +256,7 @@ label {
   margin-bottom: 16px;
 }
 
-.modal-window-label,
-.modal-textarea-label {
+.modal-window-label {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
@@ -327,7 +320,12 @@ label {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.user-privacy-text {
+.modal-checkbox {
+  margin-bottom: 24px;
+}
+
+.checkbox-user-text {
+  display: block;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
@@ -335,11 +333,18 @@ label {
   color: var(--lightslate);
 }
 
-.checkbox-user-acccept {
-  display: flex;
+.user-privacy-box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 24px;
-  cursor: pointer;
+  justify-content: center;
+  fill: transparent;
 }
 
 .checkbox-icon-svg {
@@ -357,7 +362,7 @@ label {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-user-privacy:checked + .checkbox-icon-svg {
+.checkbox-user-privacy:checked > .checkbox-icon-svg {
   background-color: var(--iris);
   border-color: var(--iris);
 }
