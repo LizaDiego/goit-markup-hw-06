@@ -238,6 +238,14 @@ label {
   padding: 72px 24px 24px 24px;
 }
 
+.modal-window-container {
+  margin-bottom: 8px;
+}
+
+.modal-input-box {
+  position: relative;
+}
+
 .modal-window-label,
 .modal-textarea-label {
   display: block;
