@@ -359,7 +359,7 @@ label {
   color: var(--iris);
 }
 
-.checkbox-user-privacy:checked + .checkbox-icon-svg {
+.checkbox-user-privacy:checked + .user-privacy-box {
   background-color: var(--ocean);
   fill: var(--cloud);
   border: none;
