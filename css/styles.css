@@ -293,6 +293,10 @@ label {
   border-color: var(--iris);
 }
 
+.input-info-box:focus {
+  fill: var(--iris);
+}
+
 .input-info-svg {
   position: absolute;
   left: 16px;
@@ -362,6 +366,7 @@ label {
 .user-privacy-box {
   background-color: var(--ocean);
   fill: var(--cloud);
+  border: none;
 }
 
 .checkbox-icon-svg {
