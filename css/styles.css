@@ -243,6 +243,9 @@ label {
   margin-bottom: 8px;
 }
 
+.modal-checkbox {
+  margin-bottom: 24px;
+}
 .modal-input-box {
   position: relative;
 }
@@ -294,6 +297,10 @@ label {
   top: 50%;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-info-svg:focus {
+  fill: var(--iris);
 }
 
 .input-info-box:hover + .input-info-svg,
@@ -348,6 +355,16 @@ label {
   fill: transparent;
 }
 
+.privacy-link {
+  color: var(--iris);
+}
+
+.checkbox-icon-svg:checked .checkbox-icon-svg {
+  background-color: var(--ocean);
+  border: none;
+  fill: var(--cloud);
+}
+
 .checkbox-icon-svg {
   width: 16px;
   height: 16px;
@@ -363,26 +380,24 @@ label {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-user-privacy:checked > .checkbox-icon-svg {
-  background-color: var(--iris);
-  border-color: var(--iris);
-}
-
 /* <-- This is for the form send button --> */
 a {
   text-decoration: none;
 }
 
 .modal-form-send {
+  max-width: 169px;
+  height: 56px;
+  font-family: Roboto, sans-serif;
   color: var(--white);
   text-align: center;
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   border: none;
   border-radius: 4px;
-  background: var(--iris);
+  background-color: var(--iris);
   padding: 16px 32px;
   margin: 0 auto;
   cursor: pointer;
