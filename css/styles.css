@@ -288,7 +288,8 @@ label {
 .input-info-box:hover,
 .input-info-box:focus,
 .textarea-comment-box:hover,
-.textarea-comment-box:focus {
+.textarea-comment-box:focus,
+.input-info-svg {
   border-color: var(--iris);
 }
 
@@ -298,21 +299,6 @@ label {
   top: 50%;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input-info-box:focus {
-  fill: var(--iris);
-}
-
-.input-info-box:checked {
-  background-color: var(--ocean);
-  border: none;
-  fill: var(--cloud);
-}
-
-.input-info-box:hover .input-info-svg,
-.input-info-box:hover {
-  fill: var(--iris);
 }
 
 .modal-textarea {
@@ -339,7 +325,7 @@ label {
   margin-bottom: 24px;
 }
 
-.checkbox-user-text {
+.checkbox-user-accept {
   display: block;
   font-size: 12px;
   font-weight: 400;
@@ -348,7 +334,7 @@ label {
   color: var(--lightslate);
 }
 
-.checkbox-icon-svg {
+.user-privacy-box {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -366,10 +352,15 @@ label {
   color: var(--iris);
 }
 
-.checkbox-user-privacy:checked,
-.checkbox-icon-svg {
+.checkbox-user-privacy {
   background-color: var(--ocean);
   border: none;
+  fill: var(--cloud);
+}
+
+.checkbox-user-privacy:checked,
+.user-privacy-box {
+  background-color: var(--ocean);
   fill: var(--cloud);
 }
 
@@ -383,7 +374,6 @@ label {
   justify-content: center;
   padding: 2px;
   fill: var(--white);
-  margin-right: 8px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
