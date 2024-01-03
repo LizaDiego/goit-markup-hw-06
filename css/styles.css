@@ -221,6 +221,7 @@ li > .link:focus {
 
 label {
   display: block;
+  position: relative;
 }
 
 .modal {
@@ -299,11 +300,17 @@ label {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-info-svg:focus {
+.input-info-box:focus {
   fill: var(--iris);
 }
 
-.input-info-box:hover + .input-info-svg,
+.input-info-box:checked {
+  background-color: var(--ocean);
+  border: none;
+  fill: var(--cloud);
+}
+
+.input-info-box:hover .input-info-svg,
 .input-info-box:hover {
   fill: var(--iris);
 }
@@ -341,7 +348,7 @@ label {
   color: var(--lightslate);
 }
 
-.user-privacy-box {
+.checkbox-icon-svg {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -359,7 +366,8 @@ label {
   color: var(--iris);
 }
 
-.checkbox-icon-svg:checked .checkbox-icon-svg {
+.checkbox-user-privacy:checked,
+.checkbox-icon-svg {
   background-color: var(--ocean);
   border: none;
   fill: var(--cloud);
@@ -386,7 +394,7 @@ a {
 }
 
 .modal-form-send {
-  max-width: 169px;
+  min-width: 169px;
   height: 56px;
   font-family: Roboto, sans-serif;
   color: var(--white);
